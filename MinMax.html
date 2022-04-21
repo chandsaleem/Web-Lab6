@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min and Max</title>
+</head>
+<body>
+    <H2>Enter numbers in given Boxes</H2>
+    <h2>A.<input type="text" size="10" id="a"></h2>
+    <h2>B.<input type="text" size="10" id="b"></h2>
+    <h2>C.<input type="text" size="10" id="c"></h2>
+    <h2>D.<input type="text" size="10" id="d"></h2>
+    <h2>E.<input type="text" size="10" id="e"></h2>
+    <button onclick="calculate()"> Calculate</button>
+    <h2>Minimum: <h3 id="min"></h3></h2>
+    <h2>Maximum: <h3 id="max"></h3></h2>
+    <h2>Random:  <h3 id="random"></h3></h2>
+    <script>
+        function calculate(){
+            var a = parseInt(document.getElementById("a").value);
+            var b = parseInt(document.getElementById("b").value);
+            var c = parseInt(document.getElementById("c").value);
+            var d = parseInt(document.getElementById("d").value);
+            var e = parseInt(document.getElementById("e").value);
+
+            var list = [a, b, c, d, e];
+            document.getElementById("min").innerHTML = Math.min(a,b,c,d,e)
+            document.getElementById("max").innerHTML = Math.max(a,b,c,d,e)
+            document.getElementById("random").innerHTML = list[Math.floor(Math.random() * list.length)]
+
+        }
+    </script>
+</body>
+</html>
